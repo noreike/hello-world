@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>検索結果</title>
+    <script type="text/javascript">
+        window.onload = function() {
+            var height = document.getElementsByTagName("html")[0].scrollHeight;
+            window.parent.postMessage(["setHeight", height], "*");
+        }
+    </script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="search_result">
+    <form name="yakuzai" action="" method="GET" onsubmit="">
+        <div class="sbox">
+            <input type="text" name="keyword" value="" class="" placeholder="医薬品名の一部を入力してください"><input type="submit" value="検索">
+        </div>
+        <div class="rbox">
+            <input type="radio" name="pharmaceuticals" id="p1"><label for="p1">治療開始給付金のお支払い対象となる医薬品</label><br>
+            <input type="radio" name="pharmaceuticals" id="p2"><label for="p2">重症化予防給付金のお支払い対象となる医薬品</label><br>
+            <input type="radio" name="pharmaceuticals" id="p3" checked><label for="p3">いずれかの給付金のお支払い対象となる医薬品</label>
+        </div>
+    </form>
+    <div>
+        <h2>検索結果一覧</h2>
+        <p class="note">※注意事項テキストテキストテキスト。</p>
+        <ol>
+            <li><span><span class="item">キニスト錠0.5mg</span><a href="">詳細はこちら</a></span></li>
+            <li><span><span class="item">キニスト錠2mg</span><a href="">詳細はこちら</a></span></li>
+            <li><span><span class="item">レプロスト注射液100mg</span><a href="">詳細はこちら</a></span></li>
+            <li><span><span class="item">マプロストアルファデクス錠10μg</span><a href="">詳細はこちら</a></span></li>
+            <li><span><span class="item">マプロストアルファデクステキストテキスト錠10μg</span><a href="">詳細はこちら</a></span></li>
+        </ol>
+    </div>
+</body>
+</html>
